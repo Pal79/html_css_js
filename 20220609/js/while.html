@@ -1,0 +1,30 @@
+<script>
+	let i = 0; 
+
+	while ( i < 10) {
+		console.log(` ${i} -szer/szor futott a ciklus`); 
+		i++;
+	}
+
+	i = 10; 
+	do {
+		console.log(` ${i} -szer/szor futott a do - while ciklus`); 
+		i++;
+
+	} while (i < 10);
+
+	for ( let i = 0;  i < 10; i++ ) {
+		console.log(` ${i} -szer/szor futott a for ciklus`); 
+	}
+
+	let isBroken = false; 
+	do{
+		let random = Math.floor(Math.random()*11); 
+		if (random == 10) isBroken = true;
+		console.log("Megy a kútra"); 
+	} while ( !isBroken ); 
+
+	let bool = false;
+
+	if ( !bool ) console.log("Igaz"); 
+</script>
