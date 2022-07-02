@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.g0">
+		<title>Document</title>
+		<style>
+			body{
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+				grid-template-rows: 20vh 20vh 20vh 20vh 20vh 20vh;
+				grid-template-areas: "g01 g01 g01 g02 g02 g03"
+									 "g04 g04 g05 g05 g05 g05"
+									 "g04 g04 g06 g06 g06 g06"
+									 "g07 g07 g07 g08 g08 g08"
+									 "g07 g07 g07 g08 g08 g08";	
+			}
+			@media only screen and ( max-width: 1000px ){
+				body{
+				grid: 
+					"g01 g01 g01 g02 g02 g03" 30vh
+					"g04 g04 g05 g05 g05 g05" 20vh
+					"g04 g04 g03 g06 g06 g06" 20vh
+					"g07 g07 g07 g08 g08 g08" 20vh
+					"g07 g07 g07 g08 g08 g08" 20vh
+					/ 1fr 1fr 1fr 1fr 1fr;
+				;
+				}
+			}
+			@media only screen and ( max-width: 800px ){
+				body{
+				grid: 
+					"g01 g03 g05 g07 g09" 20vh
+					"g01 g04 g05 g07 1g0" 20vh
+					"g01 g04 g06 g07 1g0" 20vh
+					"g02 g04 g06 g08 1g0" 20vh
+					/ 1fr 1fr 1fr 1fr 1fr;
+				;
+				}
+			}
+			div{
+				border: thin solid red;
+				font-size: 36px;
+			}
+			div:nth-child(1){
+				border: thin solid blue;
+				grid-area: g01;
+			}
+			div:nth-child(2){
+				border: thin solid green;
+				grid-area: g02;
+			}      
+			div:nth-child(3){
+				border: thin solid magenta;
+				grid-area: g03; 
+			}
+			div:nth-child(4){
+				border: thin solid blue;
+				grid-area: g04;
+			}
+			div:nth-child(5){
+				border: thin solid blue;
+				grid-area: g05;
+			}
+			div:nth-child(6){
+				border: thin solid blue;
+				grid-area: g06;
+			}
+			div:nth-child(7){
+				border: thin solid blue;
+				grid-area: g07;
+			}
+			div:nth-child(8){
+				border: thin solid blue;
+				grid-area: g08;
+			}
+		</style>
+	</head>
+
+	<body>		
+		<div>g01</div>
+		<div>g02</div>
+		<div>g03</div>
+		<div>g04</div>
+		<div>g05</div>
+		<div>g06</div>
+		<div>g07</div>
+		<div>g08</div>
+	</body>
+</html>
