@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<h1 id="planet_name"></h1>
+
+		<p id="sdfgxydfg">21 éves nő keresi... </p>
+		<p id="ASDFASDFASDF">EZ AZ ÉLES ADAT 2122222222</p>
+
+		<script>
+			/*
+			Asyncronous Javascript And XML
+			*/
+			let xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function () {
+				if (this.status == "200" && this.readyState == 4) {
+					let obj = {};
+					
+					obj = JSON.parse(this.response);
+					console.log(obj);
+					
+					if (obj.p  == 1){
+						document.querySelector("#planet_name").innerHTML =  "Egy" ; 
+					} else {
+						document.querySelector("#planet_name").innerHTML =  "Nem egy. "; 
+					}				  
+				}
+			};
+			xhr.open("GET", "http://localhost/api.php", true);
+			xhr.send();
+
+			/*
+			https://swapi.dev/api/
+			https://swapi.dev/api/planets/
+			https://swapi.dev/api/planets/1
+			https://swapi.dev/api/planets/2
+			*/
+		</script>
+	</body>
+</html>
