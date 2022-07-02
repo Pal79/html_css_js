@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div id="a1" class="masvalami" data-cikkszam="11" data-mas="dfgsdfgsdfg">qwer</div>
+		<div id="a2" class="masvalami" data-cikkszam="22">asdf</div>
+		<div id="a3" class="masvalami" data-cikkszam="33">yxcv</div>
+
+		<script>
+			let divek = document.querySelectorAll("div"); 
+			for (div of divek){
+				console.log(  div.dataset.cikkszam   );
+				console.log(  div.dataset.mas );
+			}
+		</script>
+	</body>
+</html>
