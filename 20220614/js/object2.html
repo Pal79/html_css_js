@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>		
+		<section id="ajdi" class="cls1 cls2" style="color: blue; background-color: red">
+			Tartalom
+			<article id="cikk1" class="cls3" style="color: green">Cikk1</article>
+			<article id="cikk2" class="cls4" style="color: magenta">Cikk2</article>
+		</section>
+	</body>
+</html>
+	<script>
+		/*
+		let elem = {
+			id: "ajdi",
+			className: "cls1 cls2",
+			tagName: "section",
+			innerText: "Tartalom",
+			style: {
+				color: "blue",
+				backgroundColor: "red"
+			},
+			children: [{
+				id: "cikk1",
+				className: "cls3",
+				tagName: "article",
+				innerText: "Cikk1",
+				style: {
+					color: "green",
+				}
+			}
+			, 
+			{
+				id: "cikk2",
+				className: "cls4",
+				tagName: "article",
+				innerText: "cikk2",
+				style: {
+					color: "magenta",	
+				}
+			}]
+		}*/
+
+		let elem = document.querySelector("section");
+
+		console.dir(elem);
+
+		console.log( elem.children[0].innerText );
+		console.log( elem.children[1].style.color);
+		console.log( elem.children[1].className);
+</script>
