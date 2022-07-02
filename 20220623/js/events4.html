@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<form action="">  
+			<select name="gender" id="gendert">
+				<option value=""></option>
+				<option value="fiu">Fiú</option>
+				<option value="lany">Lány</option>
+				<option value="ah">Apache helkopter</option>
+			</select>
+
+			<input type="text" id="gender">
+			<input type="password" id="password">
+			<input type="submit" id="asdfasdf">
+
+			<script>
+				//   "click" => "change"  
+				let select = document.querySelector("#gender");
+
+				//select.addEventListener("change", function () {
+				select.addEventListener("keyup", function () {
+					switch (select.value) {
+						case "fiu":
+							document.body.style.backgroundColor = "lightblue";
+						break;
+						case "lany":
+							document.body.style.backgroundColor = "pink";
+						break;
+						case "ah":
+							document.body.style.backgroundColor = "green";
+						break;
+						default: 
+							document.body.style.backgroundColor = "white";
+						break;
+					}
+				});
+			</script>
+		</form>
+	</body>
+</html>
