@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			body {
+				display: grid;
+				grid:
+					"header header header" 20vh
+					"nav main aside" 60vh
+					"footer footer footer" 20vh 
+					/minmax(20%, 200px) 1fr minmax(20%, 200px);
+				;
+			}
+			header {
+				grid-area: header;
+			}
+			nav {
+				grid-area: nav;
+			}
+			main {
+				grid-area: main;
+			}
+			aside {
+				grid-area: aside;
+			}
+			footer {
+				grid-area: footer;
+			}
+			body * {
+				border: thin solid red;
+			}
+			@media (max-width: 500px) {
+				body {
+					grid:
+						"header" 20vh
+						"nav" 60vh
+						"main" 60vh
+						"aside" 60vh
+						"footer" 20vh
+						 /1fr;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>q</header>
+		<main>q</main>
+		<nav>q</nav>
+		<aside>q</aside>
+		<footer>q</footer>
+	</body>
+</html>
