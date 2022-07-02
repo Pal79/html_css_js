@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			input{
+				border: none; 
+				outline: none; 
+				background-color: yellow;
+			}
+			input:focus{
+				background-color: lightgreen;
+			}
+			input:required{
+				color: red; 
+			}        
+			textarea:disabled, input:disabled   {
+				background-color: darkgrey; 
+			}
+			form :read-only{
+				color: deeppink; 
+			}
+			input:in-range{
+				background-color: green; 
+			}
+			input:out-of-range{
+				background-color: red; 
+			}
+			:only-child
+		</style>
+	</head>
+
+	<body>
+		<form action="">
+			<input type="text" required readonly value="AKARMI">
+			
+			<input type="number" min="18" max="99">
+			
+			<input type="text" disabled>
+
+			<textarea name="" id="" cols="30" rows="10" readonly >
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cum non reprehenderit vel facere sed quaerat sit dolores quo ullam expedita sint unde, eligendi voluptatem amet nemo, minus asperiores? Maxime.
+			</textarea>
+		</form>
+	</body>
+</html>
