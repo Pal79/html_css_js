@@ -1,0 +1,39 @@
+<script>
+    let szamok = [1, 2, 3, 5, 7, 5, 3, 3, 6, 7, 8, 23];
+    let osszeg = 0;
+    /*
+    for ( let i = 0; i < 12; i++) {
+        osszeg += szamok[i]; 
+    }
+    console.log ( osszeg );
+    */
+    let tombDrab = szamok.length;
+    console.log(tombDrab);
+
+    for (let i = 0; i < szamok.length; i++) {
+        osszeg += szamok[i];
+    }
+    console.log(osszeg);
+
+    console.log("---------------------");
+
+    let szamlalo = 0;
+    for (let i = 1; i <= 1000; i++) {
+
+        if (i % 8 == 0) szamlalo++;
+
+    }
+    console.log(szamlalo);
+
+    // 2523
+
+    let szam = 0;
+    const keresendo = 1975;
+    for (let i = 2; i < keresendo; i++) {
+        if (keresendo % i == 0) {
+            szam++;
+            break;
+        }
+    }
+    console.log((szam == 0) ? "Prim" : "Nem prim");
+</script>
