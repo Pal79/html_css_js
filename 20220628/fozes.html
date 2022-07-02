@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>főzés</title>
+    </head>
+
+    <body>
+        <form action="" id="userForm">
+            Szoktál Főzn? <input name="cook" type="checkbox">
+            Mit szoktál főzni? <textarea name="cookWhat" id="cookwhat" cols="30" rows="10"></textarea>
+        </form>
+
+        <script>
+            let input = document.querySelector("input[name='cook']");
+
+            input.addEventListener("change", function(){
+                let textarea = document.querySelector("#cookWhat");
+                
+                console.log(input.checked);
+                
+                /*if(input.checked){
+                    textarea.disabled = false;
+                } else {
+                    textarea.disabled = true;
+                }*/
+
+                textarea.disabled = !input.checked;//egyszerűbb megoldás
+            });
+        </script>
+    </body>
+</html>
