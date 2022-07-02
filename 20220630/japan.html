@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			*{
+				margin: 0; 
+				padding: 0; 
+			}
+			.modal-container{
+				position: fixed; 
+				top: 0px;
+				width: 100vw; 
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.sotet{
+				background-color: black;
+				opacity: 0.9; 
+			}
+			.vilagosodik{
+				animation: vilagos 2s linear; 
+			}
+			.modal-inner{	
+				background-color: #fff;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			@keyframes vilagos {
+				from {
+					opacity: 0.99; 
+				}
+				to {
+					opacity: 0; 
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="modal-container  sotet">
+			<div class="modal-inner">
+			   <button>Kivilágosodik!</button>
+			</div>
+		</div>
+		
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime labore recusandae, minima nemo dicta blanditiis unde magnam, eligendi illum explicabo quos assumenda ipsam! Tempora ipsam culpa nesciunt quasi provident repellendus.
+
+		<script>
+			let modal = document.querySelector(".modal-container"); 
+			let button = document.querySelector(".modal-container button"); 
+			button.addEventListener("click", function (){
+				modal.classList.add("vilagosodik"); 
+				modal.addEventListener("animationend", function (){
+					modal.style.display = "none";
+				}); 
+			});
+		</script>
+	</body>
+</html>
