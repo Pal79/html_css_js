@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			article{
+				color: red; 
+			}
+
+			h3{
+				color: blue;
+			}
+
+			.cikk{
+				background-color: lightyellow;
+			}
+
+			#belfoldi {
+				border: red solid 1px;  
+			}
+
+			#kulfoldi {
+				border: green solid 1px;  
+			}
+
+			/*
+			a[href] {
+				text-decoration: underline; 
+				text-decoration-color:green;
+			}
+			*/
+			a[href="idojaras"] {
+				text-decoration: underline; 
+				text-decoration-color:green;
+			}
+			a[href$="hirek"] {
+				text-decoration: underline; 
+				text-decoration-color:red;
+			}
+			a[href^="bel"] {
+				text-decoration: underline; 
+				text-decoration-color:orange;
+			}
+			a[href*="foldi"]{
+				background-color: lightpink;
+			}
+
+			article[class^="cikk"]{
+				color: gold;
+			}
+
+			input[type="text"]{
+				background-color: lightyellow;
+			}
+			input[type="number"]{
+				background-color: lightgreen;
+			}
+			input[type="password"]{
+				background-color: lightblue;
+			}
+			div[class^="col-"]
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<a href="belfoldi_hirek">Belföldi hírek</a>
+			<a href="kulfoldi_hirek">Külföldi hírek</a>
+			<a href="alfoldi_hirek">Alföldi hírek</a>
+			<a href="idojaras">Időjárás</a>
+		</nav>
+
+		<form action="">
+			<input type="text">
+			<input type="number">
+			<input type="password">
+		</form>
+
+		<div class"container">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-3"></div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+
+		<section id="belfoldi">
+			<h2>Belföldi hírek</h2>
+			<article class="cikk1">
+				<h3>Olcsóbb lesz a gázolaj</h3>
+				<p>Lorem, ipsum dolor.</p>
+			</article>
+			<article class="cikk2">
+				<h3>Olcsóbb lesz a kenyér</h3>
+				<p>Lorem, ipsum dolor.</p>
+			</article>
+		</section>
+
+		<section id="kulfoldi">
+			<h2>Külföldi hírek</h2>
+			<article class="cikk3">
+				<h3>Joe Biden szenilis</h3>
+				<p>Lorem, ipsum dolor.</p>
+			</article>
+
+			<article class="cikk4">
+				<h3>Trump hülye. </h3>
+				<p>Lorem, ipsum dolor.</p>
+			</article>
+		</section>
+	</body>
+</html>
