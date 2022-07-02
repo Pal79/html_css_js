@@ -1,0 +1,39 @@
+<script>
+    function akarmi(){
+    }
+
+    let akarmi2 = function (a){
+        return a * 2; 
+    }
+
+    let akarmi3 = (a) => {
+        return a * 2; 
+    }
+
+    let akarmi4 = a =>{
+        return a * 2;
+    }
+
+    let akarmi5 = a => { a * 2 }
+    
+    let akarmi6 = a => a * 2 ; 
+
+	/*
+		let osszeadas = function (a, b){
+			return a + b; 
+		}
+		let szorzas = function (a, b){
+			return a * b; 
+		}
+		let matek = function(a, b, muvelet){
+			return muvelet(a, b); 
+		}
+	*/
+	let osszeadas = (a, b) => a + b; 
+	let szorzas = (a, b) => a * b; 
+	let matek = (a, b, muvelet)=>{ 
+		return muvelet(a, b) 
+	}
+
+	console.log (  matek(4, 5, szorzas)  );
+</script>
