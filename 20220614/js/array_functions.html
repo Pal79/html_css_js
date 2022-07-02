@@ -1,0 +1,46 @@
+<script>
+	let szamok = [2,4,5,7,9, -11]; 
+
+	szamok.push(11);
+	console.log(szamok);
+
+	szamok.unshift(13);
+	console.log(szamok);
+
+	szamok.pop();
+	console.log(szamok);
+
+	szamok.shift();
+	console.log(szamok);
+
+	console.log( szamok.indexOf(5)   );
+
+	szamok.splice( szamok.indexOf(5), 1, 10);
+	console.log(szamok);
+
+	let szamok2 = szamok.map(function (a){
+			 return a * 2  }
+			 );
+
+	szamok2 = szamok.map(a => a * 2); 
+
+	console.log(szamok2);
+
+
+	console.log( szamok.filter((a) => { return a > 0 }  ) );
+
+
+	console.log( szamok.some( ( a )=>{ return a > 7 }   ) );
+	console.log( szamok.every( ( a )=>{ return a > 7 }   ) );
+
+	console.log(  szamok.reduce((sum, x)=> {return sum+x}  )); 
+
+
+	let betuk = ["q","a","g","r","u",];
+	let betuk = ["q","a","g","r","u",];
+
+	console.log( betuk.sort()  );
+
+	const points = [40, 100, 1, 5, 25, 10];
+	points.sort(function(a, b){return a-b});
+</script>
