@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<form action="http://localhost/form.php" method="POST" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Alapinformácuiók</legend>
+				
+				<label for="nev">Mi a neved?</label>
+				<input id="nev" type="text" name="username" placeholder="Ide kell írni"><br>
+				
+				<label for="pwd">Jelszó:</label>
+				<input id="pwd" type="password" name="jelszo" title="Legyen benne kisbetű, nagybetű, szám"><br>
+				<!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" -->
+				
+				<label for="email">Mi az email címed:</label>
+				<input type="email" name="email" id="email" required><br>
+				
+				<label for="age">Hány éves vagy?</label>
+				<input id="age" type="number" min="18" max="99" step="0.5">
+
+			</fieldset>
+			<br>
+			<input type="date"><input type="time">
+			<br>
+			
+			<label for="agree">Elfogadom az adatkezelési nyilatkozatot</label>
+			<input type="checkbox" name="av" value="agreed" checked>
+			<br>
+
+			<label for="gender">Nemed?</label>
+			<select name="gender" id="gender" required>
+				<option value=""></option>
+				<optgroup label="Választható">
+					<option value="fiu">Fiú</option>
+					<option value="lany">Lány</option>
+				</optgroup>
+				<optgroup label="Hülyeség">
+					<option value="na">Nem ismert</option>
+					<option value="ah" selected>Apache helikopter</option>
+				</optgroup>
+			</select>
+			
+			<p>Válassz egy pirulát!</p>
+			<label for="kek">Kék:</label>
+			<input id="kek" name="pill" type="radio" value="kek">
+			<label for="piros">Piros:</label>
+			<input id="piros" name="pill" type="radio" value="piros">
+			<label for="kep"></label>
+			<input id="kep" accept=".jpg" name="avatar[]" type="file" multiple>
+			<br><br><br>
+			
+			<label for="cv">Írj magadról:</label><br>
+			<textarea name="eletrajz" id="cv" cols="30" rows="10" placeholder="Ide kell írni">
+	q   
+	q  
+	q
+			</textarea>
+			<br><br>
+			<input type="hidden" name="usertype" value="seller">
+			<input type="submit">
+			
+			<button> Kosárba </button>
+		</form>
+		
+		<button> Kosárba </button>
+		
+		<abbr title="International Atomic Energy Authority">IAEA</abbr>
+		
+		<address>1032 Budapest, Lajos utca</address>
+		
+		<audio controls>
+			<source src="horse.ogg" type="audio/ogg">
+			<source src="horse.mp3" type="audio/mpeg">
+			Your browser does not support the audio tag.
+		</audio>
+		
+		<div> Lorem, <bdi> الخلافة </bdi> ipsum. </div>
+		
+		<blockquote>asdf</blockquote>
+	</body>
+</html>
