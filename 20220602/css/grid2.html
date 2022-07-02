@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			body{
+				display: grid;
+				/*grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+				grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+				grid-template-areas: 
+					"dzsenifer dzsenifer dzsenifer melinda melinda"
+					"dani dani dani melinda melinda"
+					"renata viktor viktor viktor viktor"
+					"renata noemi noemi noemi neo"
+					"renata csaba csaba gergo gergo"
+				;
+				*/
+			 grid: 
+					"dzsenifer dzsenifer dzsenifer melinda melinda" 20vh
+					"dani dani dani melinda melinda" 20vh
+					"renata viktor viktor viktor viktor" 20vh
+					"renata noemi noemi noemi neo" 20vh
+					"renata csaba csaba gergo gergo" 20vh 
+					/ 1fr 1fr 1fr 1fr 1fr ;
+				;
+			}
+			@media only screen and ( max-width: 1000px ){
+				body{
+				grid: 
+					"dzsenifer dzsenifer melinda" 20vh
+					"dani dani  melinda" 20vh
+					"renata viktor neo" 20vh
+					"renata noemi neo" 20vh
+					"csaba csaba csaba" 20vh
+					"gergo gergo gergo" 20vh 
+					/ 1fr 1fr 1fr;
+				;
+				}
+			}
+			@media only screen and ( max-width: 800px ){
+				body{
+				grid: 
+					"dzsenifer" 20vh
+					"dani" 20vh
+					"melinda" 20vh
+					"viktor" 20vh
+					"renata" 20vh
+					"noemi" 20vh
+					"csaba" 20vh
+					"gergo" 20vh 
+					"neo" 20vh 
+					/ 1fr;
+				;
+				}
+			}
+			div{
+				border: thin solid red;
+				font-size: 36px;
+			}
+			div:nth-child(1){
+				border: thin solid blue;
+				grid-area: dzsenifer;
+			}
+			div:nth-child(2){
+				border: thin solid green;
+				grid-area: dani;
+			}      
+			div:nth-child(3){
+				border: thin solid magenta;
+				grid-area: melinda; 
+			}
+			div:nth-child(4){
+				border: thin solid blue;
+				grid-area: viktor;
+			}
+			div:nth-child(5){
+				border: thin solid blue;
+				grid-area: csaba;
+			}
+			div:nth-child(6){
+				border: thin solid blue;
+				grid-area: noemi;
+			}
+			div:nth-child(7){
+				border: thin solid blue;
+				grid-area: gergo;
+			}
+			div:nth-child(8){
+				border: thin solid blue;
+				grid-area: renata;
+			}
+			div:nth-child(9){
+				border: thin solid blue;
+				grid-area: neo;
+			}
+		</style>
+	</head>
+
+	<body>		
+		<div>Dzsenifer</div>
+		<div>Dani</div>
+		<div>Melinda</div>
+		<div>Viktor</div>
+		<div>Csaba</div>
+		<div>Noémi</div>
+		<div>Gergő</div>
+		<div>Renáta</div>
+		<div>Neo</div>
+	</body>
+</html>
