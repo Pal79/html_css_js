@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			html, body{
+				height: 100%;
+			}
+			body{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				perspective: 800px;
+			}
+			div{
+				
+				/*backface-visibility: hidden;*/
+			}
+			div:hover{
+				animation: mozog 3s ; 
+			}
+			@keyframes mozog{
+				from{
+					transform:scale(100%);
+				}
+				to{
+					transform:scale(110%);
+				}
+			}   
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<img width="200" src="eb.jpg" alt="wreg">
+		</div>
+	</body>
+</html>
