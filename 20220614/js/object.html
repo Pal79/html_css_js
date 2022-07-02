@@ -1,0 +1,31 @@
+<script>
+	let verda = {
+		marka: "Volvo",
+		tipus: "v60",
+		evjarat: 2015,
+		tulajok: [
+		{
+			vezetekNev: "Nagy",
+			keresztNev: "Csaba"
+		},
+		{
+			vezetekNev: "Fehér",
+			keresztNev: "Melinda"
+		}],
+		osszesTulaj: function (){
+			let t = []; 
+			for (tulaj of this.tulajok){
+				t.push(tulaj.vezetekNev + " " + tulaj.keresztNev);
+			}
+			return t; 
+		}
+	}; 
+
+
+	console.log(verda.tulajok[0])
+	console.log(verda.tulajok[1])
+	console.log(verda.tulajok[1].keresztNev);
+	console.log(verda.osszesTulaj());
+
+	if(elem)
+</script>
