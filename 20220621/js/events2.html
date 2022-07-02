@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			div {
+				background-color: #0f0f;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}	
+		</style>
+	</head>
+
+	<body>
+		<button onclick="gombnyomasra()">Gomb!!</button>
+
+		<div></div>
+
+		<a href="https://www.google.com">Ez egy link</a>
+
+		<script>
+			let link = document.querySelector("a"); 
+
+			link.addEventListener("click", ( event )=>{
+				event.preventDefault();
+				console.log("Megnyomtad a linket!!!"); 
+			}); 
+
+			let divek = document.querySelectorAll("div");
+			let nyomkodja = (event) => {
+				console.dir(event.target);
+				event.target.style.backgroundColor = "magenta";
+				console.log("Nyomkodja");
+			}
+			let kiszinez = () =>{
+				event.target.style.backgroundColor = "magenta";
+			}
+			let visszaszinez = () =>{
+				event.target.style.backgroundColor = "#0f0f";
+			}
+
+			for (div of divek) {
+				div.addEventListener("click", nyomkodja);
+				div.addEventListener("mouseenter", kiszinez);
+				div.addEventListener("mouseleave", visszaszinez);
+				div.addEventListener("animationiteration", ()=>{
+					console.log("Animáció vége");
+				});
+			}
+			/*
+			div.addEventListener("click", function (){
+				console.log("Nyomkodja"); 
+			});
+
+			div.addEventListener("click", ()=>{
+				console.log("Nyomkodja"); 
+			});
+			*/
+		</script>
+	</body>
+</html>
