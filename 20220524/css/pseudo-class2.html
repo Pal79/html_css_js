@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			article:nth-of-type(even) {
+				color: red;
+			}
+			tbody tr:nth-of-type(odd){
+				background-color: lightcoral; 
+			}
+			tbody tr:nth-of-type(even){
+				background-color: lightseagreen;  
+			}
+			section div:nth-child(1) {
+				background-color: yellow;
+			}
+			div{
+				height: 20px;
+			}
+			div:empty{
+				background-color: pink;
+			}
+			article p:not(.c2){
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div></div>
+		<div>qw</div>
+		<div>qw</div>
+		<div>ert</div>
+
+		<article>
+			<p class="c1">qwer</p>
+			<p class="c1">qwer</p>
+			<p class="c1">qwer</p>
+			<p class="c2">qwer</p>
+			<p class="c2">qwer</p>
+			<p class="c2">qwer</p>
+			<p class="c3">qwer</p>
+			<p class="c3">qwer</p>
+			<p class="c3">qwer</p>
+		</article>
+
+		<section>
+			<div>Lorem, ipsum.</div>
+			<article>Lorem, ipsum.</article>        
+			<article>Lorem, ipsum.</article>
+			<article>Lorem, ipsum.</article>
+			<article>Lorem, ipsum.</article>
+			<article>Lorem, ipsum.</article>
+		</section>    
+
+		<!--   table>(thead>tr>th*5)+(tbody>tr*30>td*5)  -->
+		<table>
+			<thead>
+				<tr>
+					<th>qwer</th>
+					<th>asdf</th>
+					<th>yxcv</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+				<tr>
+					<td>qwer</td>
+					<td>asdf</td>
+					<td>yxcv</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
