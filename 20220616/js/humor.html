@@ -1,0 +1,86 @@
+<script>
+	//Addig üsd a vasat, míg meleg.
+	let ironTemp = 4000; 
+	while (ironTemp > 2000){
+		console.log("Üsdd");
+		ironTemp--;
+	}
+
+	//Vak tyúk is talál szemet.
+	let isCheickenBlind = true;
+	if (isCheickenBlind){
+		console.log("Van szem"); 
+	}
+	else {
+		console.log("Van szem"); 
+	}
+
+	//Nesze semmi, fogd meg jól.
+	let ajandek = null; 
+	if (ajandek == null){
+		console.log("Fogd meg");
+	}
+
+	//A jó pap holtig tanul.
+	let isGoodPriest = true;
+	let priestAge = 30;
+	let isPriestDead = false; 
+
+	if(isGoodPriest){
+		while(!isPriestDead){
+			console.log("Tanulok... ");
+			if (priestAge > 90){
+				isPriestDead = true;
+			}
+			priestAge++; 
+		}    
+	}
+
+	//egy bolond százat csinál
+	let numberOfFools = 0; 
+	if (numberOfFools > 0){
+		numberOfFools *= 100;
+	}
+
+	//Sok lúd disznót győz.
+	let numberOfGeese = 49; 
+	if (numberOfGeese > 50){
+		console.log("Disznó halott.");
+	}
+
+	//Amelyik kutya ugat, az nem harap.
+	let isDogBarking = true;
+	if (isDogBarking){
+		console.log("Nem harap")
+	} else {
+		console.log("Harap");
+	}
+
+	//Minden kezdet nehéz.
+	let kezdetek = ["Kezdet","Kezdet","Kezdet","Kezdet","Kezdet"]; 
+	for(kezdet of kezdetek){
+		console.log(kezdet + "nehéz");
+	}
+
+	//A vén kecske is megnyalja a sót.
+	let goatAge = 15; 
+	if (goatAge >= 15){
+		console.log("Nyalja"); 
+	} else {
+		console.log("Nyalja"); 
+	}
+
+	//Könnyű Katit táncba vinni (ha ő is akarja).
+	let cathyWantsToDance = false;
+	if (  cathyWantsToDance  ){
+		console.log("Könnyű tánc");
+	} else {
+		console.log("Erőszakos tánc");
+	}
+
+	//Amit szabad Jupiternek, nem szabad azt az ökörnek
+	let jupiterAllowed = [true, true, true, false]; 
+	for (j of jupiterAllowed){
+		console.log("Ökörnek " + !j); 
+	}
+</script>
