@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			nav div {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+			nav button {
+				display: block;
+			}
+			nav div {
+				display: none;
+			}
+			nav div.opened{
+				display: flex;
+			}
+			@media only screen and (min-width: 800px) {
+				nav div {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					align-items: center;
+				}
+				nav button {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<button>MENÜ</button>
+			<div>
+				<a href="#">Menü 1</a>
+				<a href="#">Menü 2</a>
+				<a href="#">Menü 3</a>
+				<a href="#">Menü 4</a>
+				<a href="#">Menü 5</a>
+			</div>
+		</nav>
+
+		<div id="ajdui" class="qwer asdf yxcv">Juhuu</div>
+
+		<script>
+			let button = document.querySelector("nav button");
+			let menu = document.querySelector("nav div");
+			button.addEventListener("click", function () {
+				menu.classList.toggle("opened");
+			});
+			
+			let elem = {
+				tagName: "div",
+				id: "ajdui",
+				className: "qwer  asdf yxcv"
+
+			}; 
+			let div = document.querySelector("#ajdui"); 
+			
+			div.classList.add("hozzaadottClass"); 
+			div.classList.remove("asdf"); 
+
+			console.dir(div.classList);
+			console.dir(div.classList.contains("qwer"));
+		</script>
+	</body>
+</html>
