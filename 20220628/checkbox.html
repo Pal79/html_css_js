@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="user_form">
+        <input type="text" name="nev">
+        <input type="text" name="cim">
+        <input type="text" name="anyad_neve">
+        <input type="text" name="telefon">
+        <input type="submit">
+    </form>
+    <script>
+        let form = document.querySelector("#user_form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();//alapértelmezett működést megtilt
+            //console.log(this);
+            let inputok = document.querySelectorAll("input[type='text']");
+			let full = true;
+            for(input of inputok){
+                if(input.value==""){
+                    input.style.border = "thin solid red";
+					full = false;
+                }
+            }
+			if(full) form.submit();
+        });
+    </script>
+</body>
+</html>
