@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				scroll-behavior: smooth;
+			}
+			header {
+				height: 200px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-color: black;
+				perspective: 500px;
+			}
+			header div {
+				transform: rotateX(60deg);
+			}
+			header h1 {
+				color: orange;
+				font-size: 100px;
+				text-align: center;
+			}
+			@media only screen and (max-width: 800px) {
+				header h1 {
+					font-size: 40px;
+				}
+			}
+			header h2 {
+				color: orange;
+				font-size: 100px;
+				text-align: center;
+			}
+			nav {
+				height: 40px;
+				background-color: black;
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+			}
+			nav a {
+				color: orange;
+				text-decoration: none;
+				line-height: 40px;
+				font-size: 32px;
+			}
+			@media only screen and (max-width: 800px) {	
+				nav a {
+					font-size: 16px;
+				}
+			}
+			nav a:hover {
+				text-decoration: underline;
+				background-color: rgb(10, 10, 10);
+			}
+			section {
+				padding: 10px;
+			}
+			#episodes .wrapper {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+			}
+			#episodes article {
+				background-color: orange;
+				flex: 1 1 30%;
+				margin: 10px;
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+			@media only screen and (max-width: 800px) {
+				#episodes .wrapper {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+				}
+			}
+			#characters .wrapper {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			#characters article {
+				flex: 1 1 45%;
+				margin: 10px;
+				background-color: orange;
+			}
+			@media only screen and (max-width: 800px) {
+				#characters .wrapper {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					flex-wrap: nowrap;
+				}
+			}
+			#teteje {
+				position: fixed;
+				bottom: 30px;
+				right: 30px;
+				display: none;
+			}
+			#teteje img {
+				width: 50px;
+				border: 1px solid orange;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<h1>STAR WARS</h1>
+				<h2>EPISODE VII</h2>
+			</div>
+		</header>
+		
+		<nav>
+			<a href="#epidodes">Epizódok</a>
+			<a href="#characters">Szereplők</a>
+			<a href="#games">Játékok</a>
+			<a href="#planets">Bolygók</a>
+			<a href="#books">Könyvek</a>
+			<a href="#spaceships">Űrhajók</a>
+		</nav>
+
+		<main>
+			<section id="episodes">
+				<h2>Epizódok</h2>
+				<div class="wrapper">
+					<article>
+						<h3>IV - Új remény</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+					<article>
+						<h3>V - A birodalom visszavág</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+					<article>
+						<h3>VI - A Jedi visszatér</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+				</div>
+			</section>
+			
+			<section id="characters">
+				<h2>Szereplők</h2>
+				<div class="wrapper">
+					<article>
+						<h3>Darth Vader</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+					<article>
+						<h3>Han Solo</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+					<article>
+						<h3>Luke Skywalker</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+					<article>
+						<h3>R2-D2</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nulla!</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="games"></section>
+			<section id="planets"></section>
+			<section id="books"></section>
+			<section id="spaceships"></section>
+		</main>
+		<footer></footer>
+
+		<div id="teteje"><a href="#"><img src="fel.png" alt="Tetejére"></a></div>
+
+		<script>
+			window.addEventListener("scroll", function () {
+				console.log(this.pageYOffset);
+				if (window.pageYOffset > 240) {
+
+					document.querySelector("#teteje").style.display = "block";
+				} else {
+					document.querySelector("#teteje").style.display = "none";
+				}
+			});
+		</script>
+	</body>
+</html>
