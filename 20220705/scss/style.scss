@@ -1,0 +1,44 @@
+$hatter: yellow;
+$betuszin: blue;
+
+@import "csaba";
+@import "neo";
+
+@mixin meretek{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@mixin szinek{
+    color: deeppink;
+    background-color: lightblue;
+    @include meretek;
+}//érdemes külön fájlba tenni
+
+body{
+    background-color: $hatter;
+    @include szinek;
+}
+
+#elso{
+    color: $betuszin;
+    article{
+        background-color: $hatter;
+        color: green;
+        &:hover{//parent selector
+            color: red;
+            @include szinek;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        color: magenta;
+    }
+}
+
+$margins: 10, 20, 30, 40, 50;
+@each $m in $margins{
+    .mrg-#{$m} {
+        margin-bottom: #{$m}px;
+        @include szinek;
+    }
+}
