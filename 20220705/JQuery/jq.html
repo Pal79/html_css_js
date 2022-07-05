@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: thin solid red;
+        }
+        .kocka{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nobis!</div>
+    <button>Nyomd meg</button>
+    <div class="kocka"></div>
+    <div class="kocka"></div>
+    <div class="kocka"></div>
+    <div id="mozog" class="kocka"></div>
+    <script>
+//selector
+
+
+$("button").click(function(){
+    //$("div").fadeOut(5000);//5s
+    //$("div").fadeIn(2000);
+    //$("div").fadeToggle();
+    $("div").slideToggle(2000);
+});
+
+$("div#mozog").animate(
+    {
+        left: "50px"
+    },5000);
+
+$("kocka").mouseenter(function(){
+    $(this).animate({
+        left: '10px',
+        backgroundColor: 'yellow'
+    }, 1000);
+});
+
+$(".kocka").click(function(){
+    $(this.css("background-color", "blue").css("border", "3px solid yellow"));
+    $(this).html("Akármi");
+
+    console.log($(this).css("background-color"));//tulajdonság kiolvasása
+    let szin = $(this).css("background-color");
+});
+
+    </script>
+
+</body>
+</html>
