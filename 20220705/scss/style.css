@@ -1,0 +1,75 @@
+section {
+  background-color: lightblue;
+}
+
+article {
+  font-size: 32px;
+}
+
+body {
+  background-color: lightpink;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#elso {
+  color: blue;
+}
+#elso article {
+  background-color: lightpink;
+  color: green;
+}
+#elso article:hover {
+  color: red;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 500px) {
+  #elso {
+    color: magenta;
+  }
+}
+
+.mrg-10 {
+  margin-bottom: 10px;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mrg-20 {
+  margin-bottom: 20px;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mrg-30 {
+  margin-bottom: 30px;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mrg-40 {
+  margin-bottom: 40px;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mrg-50 {
+  margin-bottom: 50px;
+  color: deeppink;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
